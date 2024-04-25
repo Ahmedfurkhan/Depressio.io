@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Depression Prediction Application</title>
+  <meta name="description" content="DeepBreath: Depression Test">
+  <meta name="keywords" content="Depression Test using Machine Learning">
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #fff;
+      border-bottom: none;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .navbar .nav-link {
+      color: #555;
+      font-weight: 500;
+      transition: all 0.3s ease-in-out;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center; 
+    }
+
+    .navbar .nav-link:hover {
+      color: #007bff;
+    }
+
+    .navbar-toggler {
+      display: block;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .navbar-toggler:focus {
+      outline: none;
+    }
+
+    .navbar-toggler .bar {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background-color: #333;
+      border-radius: 2px;
+      margin-bottom: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-toggler.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .navbar-toggler.active .bar:first-child {
+      transform: translateY(8px) rotate(-45deg);
+    }
+
+    .navbar-toggler.active .bar:last-child {
+      transform: translateY(-8px) rotate(45deg);
+    }
+
+    .navbar-collapse {
+      display: none;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-collapse.show {
+      display: block;
+    }
+
+    .navbar-collapse ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar-collapse a {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .banner-logo img {
+      width: 400px;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .banner-text h1 {
+      color: #333;
+      font-size: 42px;
+      font-weight: 700;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    .banner-text p {
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 3
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #fff;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="https://img.freepik.com/premium-photo/manipulator-abuser-black-man-head-hand-with-strings-fingers-isolated-white-background-male-trying-dominate-relationship-control-another-person_361816-5273.jpg?w=826" alt="error">
+        <span class="navbar-heading">Depression Detection</span>
+      </a>
+      <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <div class="navbar-collapse" id="navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/service">Quiz Based Test</a></li>
+          <li class="nav-item"><a class="nav-link" href="/sentiment">Sentiment Based Test</a></li>
+          <li class="nav-item"><a class="nav-link" href="/remedies">Remedies</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="/Model">Models</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <h3>Datalog Research</h3>
+            <p style="color: #000">DATALOG RESEARCH LAB is an Information technology service organization with vast experience in niche skills in MIDDLEWARE infrastructure design, development and support expertise along with in-house software development and develops middleware fusion “PROOF OF CONCEPTS” using IBM, ORACLE and open source tools.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+            </ul>
+        </div>        
+    </div>
+</footer>
+  <script>
+    const navbarToggler = document.getElementById('navbar-toggler');
+    const navbarCollapse = document.getElementById('navbar-collapse');
+
+    navbarToggler.addEventListener('click', function() {
+      this.classList.toggle('active');
+      navbarCollapse.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

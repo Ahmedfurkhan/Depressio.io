@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #4ea3db;
+}
+
+.container {
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+}
+
+.container .contactInfo {
+    position: absolute;
+    top: 40px;
+    background-color: #fa4c4c;
+    width: 320px;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    height: calc(100% - 80px);
+}
+
+.container .contactInfo h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container .contactInfo ul.info {
+    position: relative;
+    margin: 20px 0;
+}
+
+.container .contactInfo ul.info li {
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    margin: 20px 0;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.container .contactInfo ul.info li span:nth-child(1) {
+    width: 30px;
+    min-width: 30px;
+}
+
+.container .contactInfo ul.info li span img {
+    max-width: 100%;
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+.container .contactInfo ul.info li span:nth-child(2) {
+    color: #020202;
+    margin-left: 10px;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.container .contactInfo ul.info li:hover span img,
+.container .contactInfo ul.info li:hover span:nth-child(2) {
+    opacity: 1;
+}
+
+.container .contactInfo ul.socialIcon {
+    position: relative;
+    display: flex;
+}
+
+.container .contactInfo ul.socialIcon li {
+    list-style-type: none;
+    margin-right: 15px;
+}
+
+.container .contactInfo ul.socialIcon li a img {
+    filter: invert(1);
+    opacity: 0.5;
+}
+
+.container .contactInfo ul.socialIcon li a img:hover {
+    opacity: 1;
+}
+
+.container .contactForm {
+    position: absolute;
+    background-color: #fff;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    height: 100%;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+}
+
+.container .contactForm h2 {
+    color: #0f3959;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container .contactForm .formBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.container .contactForm .formBox .inputBox {
+    position: relative;
+    margin: 0 0 35px 0;
+}
+
+.container .contactForm .formBox .inputBox.w50 {
+    width: 47%;
+}
+
+.container .contactForm .formBox .inputBox.w100 {
+    width: 100%;
+}
+
+.container .contactForm .formBox .inputBox input,
+.container .contactForm .formBox .inputBox textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px 5px;
+    font-size: 18px;
+    color: #333;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+}
+
+.container .contactForm .formBox .inputBox span {
+    position: absolute;
+    left: 5px;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.container .contactForm .formBox .inputBox input:focus ~ span,
+.container .contactForm .formBox .inputBox input:valid ~ span,
+.container .contactForm .formBox .inputBox textarea:focus ~ span,
+.container .contactForm .formBox .inputBox textarea:valid ~ span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: rgb(19, 18, 18);
+    font-family: arial;
+}
+
+.container .contactForm .formBox .inputBox input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px;
+}
+
+.container .contactForm .formBox .inputBox input[type="submit"]:hover {
+    background-color: #111111;
+    font-weight: 500;
+}
+
+/*navigation*/
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    margin: 20px;
+  }
+  
+  .navbar a {
+    float: right;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+ 
+  }
+  
+  .navbar a:hover {
+    background-color: rgb(53, 186, 235);
+ 
+  }
+  h1{
+    color: #fff;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+  }
+
+  footer{
+    float:inline-start;
+    font-size: 16px;
+    color: rgb(12, 12, 12);
+   padding: 0px 16;
+    margin: 10px 680px;
+  }
+  .footer{
+    overflow: hidden;
+    background-color: #333;
+  }
+  a{
+    border-radius: 20px;
+    padding-left: 20px;
+  }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Contact US</h1>
+        <a href="/index">Home</a>
+        </div>
+    <section>
+        <div class="container">
+            <div class="contactInfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="img/location.png" alt=""></span>
+                            <span>
+                                Bangalore,Karnataka,India
+                            </span>
+                        </li>
+                        <li>
+                            <span><img src="img/mail.png" alt=""></span>
+                            <span>DepressioAdmin@gmail.com</span>
+                        </li>
+                        <li>
+                            <span><img src="img/call.png" alt=""></span>
+                            <span>0481-111-111</span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="socialIcon">
+                    <li><a href="#"><img src="img/1.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/2.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/3.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/4.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/5.png" alt=""></a></li>
+                </ul>
+            </div>
+
+            <div class="contactForm">
+                <h2>Send a Message</h2>
+                <div class="formBox">
+                    <div class="inputBox w50">
+                        <input type="text" name="" id="" required>
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" name="" id="" required>
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="email" name="" id="" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox w50">
+                        <input type="text" name="" id="" required>
+                        <span>Mobile Number</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <textarea name="" id="" required></textarea>
+                        <span>Write Your Message Here.</span>
+                    </div>
+                    <div class="inputBox w100">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p><h4>Students @ 2024<h4></p>
+    </footer>
+</body>
+<script>
+    function validateForm() {
+        var firstName = document.getElementById('firstName').value;
+        var lastName = document.getElementById('lastName').value;
+        var email = document.getElementById('email').value;
+        var mobileNumber = document.getElementById('mobileNumber').value;
+        var message = document.getElementById('message').value;
+
+        var isValid = true;
+        var errorMessage = '';
+
+        // Check if any field is empty
+        if (firstName === '' || lastName === '' || email === '' || mobileNumber === '' || message === '') {
+            isValid = false;
+            errorMessage = 'All fields are required.';
+        } else {
+            // Check if email is valid
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                isValid = false;
+                errorMessage = 'Please enter a valid email address.';
+            }
+
+            // Check if mobile number is valid
+            var mobilePattern = /^\d{10}$/;
+            if (!mobilePattern.test(mobileNumber)) {
+                isValid = false;
+                errorMessage = 'Please enter a valid 10-digit mobile number.';
+            }
+        }
+
+        // Display error message
+        var errorMessageElement = document.getElementById('error-message');
+        if (!isValid) {
+            errorMessageElement.innerText = errorMessage;
+        } else {
+            errorMessageElement.innerText = '';
+        }
+
+        return isValid;
+    }
+</script>
+</html>

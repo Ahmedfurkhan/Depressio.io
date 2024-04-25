@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+          background-color: #24252A; /* Change to match the background color from the second code */
+          color: #edf0f1; /* Change to match the text color from the second code */
+      }
+  
+      header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 30px 10%;
+          margin: 0px;
+          background-color: #24252A; /* Change to match the background color from the second code */
+          color: #edf0f1; /* Change to match the text color from the second code */
+      }
+  
+      .logo {
+          cursor: pointer;
+          border-radius: 20px;
+      }
+  
+      h1 {
+          font-size: 100px; /* Change to match the font size from the second code */
+          color: #fff; /* Change to match the text color from the second code */
+      }
+  
+      .container {
+          max-width: 960px;
+          margin: 0 auto;
+          padding: 20px;
+      }
+  
+      .about-us {
+          padding: 70px 0;
+          background: #e3a2a2; /* Change to match the background color from the second code */
+          color: #fff; /* Change to match the text color from the second code */
+      }
+  
+      .pic {
+          height: auto;
+          width:  302px;
+      }
+  
+      .about {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 50px;
+      }
+  
+      .text {
+          width: 50%;
+          padding: 20px;
+      }
+  
+      .text h4, .text h5 {
+          color: #fff;
+      }
+  
+      .text p {
+          color: #ccc;
+      }
+  
+      .footer {
+          background-color: #333; 
+          color: #fff; 
+          padding: 20px 0; 
+          text-align: center; 
+      }
+  
+      .footer-content {
+          max-width: 800px;
+          margin: 0 auto; 
+      }
+  
+      h3 {
+          color: #ffd700; 
+      }
+  
+      p {
+          font-size: 16px; 
+      }
+  
+      .socials {
+          list-style: none;
+          padding: 0;
+          margin: 20px 0; 
+      }
+  
+      .socials li {
+          display: inline-block;
+          margin-right: 10px;
+      }
+  
+      .socials a {
+          text-decoration: none;
+          color: #fff; 
+      }
+  
+      .footer-bottom {
+          margin-top: 20px; 
+      }
+  
+      .footer-bottom p {
+          font-size: 14px; 
+      }
+  
+      .footer-menu {
+          margin-top: 10px; 
+      }
+  
+      .f-menu {
+          list-style: none;
+          padding: 0;
+      }
+  
+      .f-menu li {
+          display: inline-block;
+          margin-right: 15px; 
+      }
+  
+      .f-menu a {
+          text-decoration: none;
+          color: #fff; 
+      }
+      button.big-button {
+        padding: 12px 30px; /* Increase padding to make the button bigger */
+        background-color: rgba(0, 136, 169, 1);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        margin: 20px auto 20px auto;
+        color: #fff; /* Set text color to white */
+        font-size: 18px; /* Increase font size */
+    }
+
+    button.big-button:hover {
+        background-color: #000; /* Change background color on hover */
+        border: 1px solid #4070f4;
+    }
+    .social-icons li {
+        display: inline-block;
+        margin-right: 10px; /* Adjust the spacing between icons */
+      }
+      
+      .social-icons li a {
+        display: block;
+        width: 40px; /* Adjust the width of the icon container */
+        height: 40px; /* Adjust the height of the icon container */
+        border-radius: 50%; /* Make the container round */
+        background-color: #007bff; /* Change the background color */
+        text-align: center;
+        line-height: 40px; /* Center the icon vertically */
+        color: #fff; /* Change the icon color */
+        font-size: 20px; /* Adjust the icon size */
+        transition: background-color 0.3s ease;
+      }
+  </style>  
+</head>
+<body>
+    <header>
+        <img class="logo" src="https://img.freepik.com/premium-photo/manipulator-abuser-black-man-head-hand-with-strings-fingers-isolated-white-background-male-trying-dominate-relationship-control-another-person_361816-5273.jpg?w=826" alt="logo" width="100px" height="80px">
+        <h1>About Us</h1>
+        <a href="/index" class="/index">
+          <button class="big-button">Home</button>
+      </a>
+      
+    </header>
+
+    <section class="about-us">
+        <div class="container">
+            <div class="about">
+                <img src="{{url_for('static',filename='img/ahmed.jpeg')}}" alt="Person 1" class="pic">
+                <div class="text">
+                    <h2>Ahmed Furkhan</h2>
+                    <h3>Front-end Developer & Designer</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about-us">
+      <div class="container">
+          <div class="about">
+            <img src="{{url_for('static',filename='img/')}}" alt="Person 2" class="pic">
+            <div class="text">
+                  <h2>Fardeen Hussain</h2>
+                  <h3>Front-end Developer & Designer</h3>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="about-us">
+    <div class="container">
+        <div class="about">
+            <img src="{{url_for('static',filename='img/')}}" alt="Person 3" class="pic">
+            <div class="text">
+                <h2>Abdul Mutalib</h2>
+                <h3>Back-end Developer & Designer</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-us">
+  <div class="container">
+      <div class="about">
+        <img src="{{url_for('static',filename='img/')}}" alt="Person 4" class="pic">
+        <div class="text">
+              <h2>Mohammed Abu Bakar Siddique Shariff</h2>
+              <h3>Front-end Developer & Designer</h3>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>DataLog Research</h3>
+                <p>DATALOG RESEARCH LAB is an Information technology service organization with vast experience in niche skills in MIDDLEWARE infrastructure design, development and support expertise along with in-house software development and develops middleware fusion “PROOF OF CONCEPTS” using IBM, ORACLE and open source tools.</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>Students &copy; <a href="#">2024</a></p>
+                <div class="footer-menu">
+                    <ul class="f-menu">
+                        <li><a href="/home">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
