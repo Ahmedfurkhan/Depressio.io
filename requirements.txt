@@ -1,3 +1,4 @@
+pythom==3.10
 absl-py==0.9.0
 annoy==1.14.0
 appdirs==1.4.3
