@@ -2,9 +2,9 @@ pip==24.0
 wordcloud
 flask_sqlalchemy
 flask_login
-tensorboard==2.14.0
-tensorflow==2.14.0
-tensorflow-estimator==2.14.0
+tensorboard
+tensorflow
+tensorflow-estimator
 termcolor
 torch==2.0.0
 tqdm==4.41.0
