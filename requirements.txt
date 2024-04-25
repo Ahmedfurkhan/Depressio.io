@@ -71,7 +71,7 @@ monotonic==1.5
 #mysql-utilities==1.6.4
 #networkx==2.2
 nltk==3.4.5
-numpy==1.12.0
+numpy>=1.23.5
 opencv-contrib-python
 pandas
 #paramiko==2.0.0
