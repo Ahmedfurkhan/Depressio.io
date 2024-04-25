@@ -49,10 +49,10 @@ pandas
 #pexpect==4.2.1
 #Pillow==6.2.2
 PyYAML==5.2
-requests==2.24.0
-scandir==1.10.0
-scikit-fuzzy==0.4.2
-scikit-image
+#requests==2.24.0
+#scandir==1.10.0
+#scikit-fuzzy==0.4.2
+#scikit-image
 scikit-learn
 scipy
 #SecretStorage==2.3.1
@@ -64,9 +64,9 @@ scipy
 #tensorflow
 #tensorflow-estimator
 #termcolor
-torch==2.0.0
-tqdm==4.41.0
-typing==3.7.4.1
+#torch==2.0.0
+#tqdm==4.41.0
+#typing==3.7.4.1
 #urllib3==1.25.10
 #virtualenv==20.0.10
 #Werkzeug==1.0.1
