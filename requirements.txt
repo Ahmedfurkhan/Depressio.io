@@ -1,3 +1,4 @@
+pip=24.0
 wordcloud
 flask-login
 flask_sqlalchemy
