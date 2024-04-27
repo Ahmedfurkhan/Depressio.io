@@ -2,7 +2,7 @@ gunicorn
 wordcloud
 flask-login
 flask_sqlalchemy
-Flask
+flask
 matplotlib
 nltk
 numpy
