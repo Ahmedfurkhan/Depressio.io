@@ -35,6 +35,7 @@ body{
     background:rgba(240, 7, 7, 0.753);
     box-shadow: 0 5px 8px 0 rgba(255, 255, 255, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
+    margin-bottom: 20px; /* Added margin for better spacing */
 }
 .login-form-1 h3{
     text-align: center;
@@ -54,7 +55,7 @@ body{
 }
 .btnSubmit{
     font-weight: 600;
-    width: 50%;
+    width: 100%; /* Changed width to 100% for responsiveness */
     color: #282726;
     background-color: #fff;
     border: none;
@@ -74,39 +75,51 @@ body{
     color: rgb(8, 8, 8);
     text-align: center;
 }
+
+/* Media queries for responsiveness */
+@media (min-width: 576px) {
+  .login-container {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .login-logo {
+    margin-left: -30%;
+  }
+  .login-form-1, .login-form-2 {
+    padding: 5%;
+  }
+}
 </style>
 <body>
 
 <div class="container login-container">
-            <div class="row">
-                <div class="col-md-6 login-form-1">
-                    <h3>Application Login</h3>
-                    <h6 class="fon">Login here to acces Depression Prediction</h6>
-                    
-                    
-                </div>
-                <div class="col-md-6 login-form-2">
-                    <div class="login-logo">
-                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                    </div>
-                    <h3>Login</h3>
-                    <form action="/login" method="post">
-                        <div class="form-group">
-                            <input type="text" name="username" class="form-control" placeholder="Your Username *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" name="password" class="form-control" placeholder="Your Password *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Login" />
-                        </div>
-                        <div class="form-group">
-
-                            <p>New User <a href="/">Register</a></p>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <div class="row">
+        <div class="col-md-6 login-form-1">
+            <h3>Application Login</h3>
+            <h6 class="fon">Login here to access Depression Prediction</h6>
         </div>
+        <div class="col-md-6 login-form-2">
+            <div class="login-logo">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+            </div>
+            <h3>Login</h3>
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <input type="text" name="username" class="form-control" placeholder="Your Username *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Your Password *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Login" />
+                </div>
+                <div class="form-group">
+                    <p>New User <a href="/">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

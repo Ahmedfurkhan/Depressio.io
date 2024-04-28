@@ -7,304 +7,283 @@
     <style>
         @import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #4ea3db;
-}
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #4ea3db;
+        }
 
-.container {
-    position: relative;
-    min-width: 1100px;
-    min-height: 550px;
-    display: flex;
-}
+        .container {
+            position: relative;
+            min-width: 300px; /* Adjusted minimum width for smaller screens */
+            width: 90%; /* Added width for responsiveness */
+            display: flex;
+            flex-direction: column; /* Changed to column layout for small screens */
+            align-items: center; /* Center content */
+        }
 
-.container .contactInfo {
-    position: absolute;
-    top: 40px;
-    background-color: #fa4c4c;
-    width: 320px;
-    padding: 80px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-    height: calc(100% - 80px);
-}
+        .container .contactInfo {
+            position: static; /* Removed absolute positioning */
+            background-color: #fa4c4c;
+            width: 100%;
+            padding: 40px; /* Adjusted padding for smaller screens */
+            box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+            margin-bottom: 20px; /* Added margin for separation */
+        }
 
-.container .contactInfo h2 {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 500;
-}
+        .container .contactInfo h2 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 20px; /* Added margin for separation */
+        }
 
-.container .contactInfo ul.info {
-    position: relative;
-    margin: 20px 0;
-}
+        .container .contactInfo ul.info {
+            margin: 20px 0;
+        }
 
-.container .contactInfo ul.info li {
-    position: relative;
-    list-style-type: none;
-    display: flex;
-    margin: 20px 0;
-    cursor: pointer;
-    align-self: flex-start;
-}
+        .container .contactInfo ul.info li {
+            list-style-type: none;
+            margin: 20px 0;
+            display: flex;
+            align-items: center; /* Center align content */
+        }
 
-.container .contactInfo ul.info li span:nth-child(1) {
-    width: 30px;
-    min-width: 30px;
-}
+        .container .contactInfo ul.info li span:nth-child(1) {
+            width: 30px;
+            min-width: 30px;
+            margin-right: 10px; /* Added margin for separation */
+        }
 
-.container .contactInfo ul.info li span img {
-    max-width: 100%;
-    filter: invert(1);
-    opacity: 0.5;
-}
+        .container .contactInfo ul.info li span img {
+            max-width: 100%;
+            filter: invert(1);
+            opacity: 0.5;
+        }
 
-.container .contactInfo ul.info li span:nth-child(2) {
-    color: #020202;
-    margin-left: 10px;
-    font-weight: 500;
-    opacity: 0.5;
-}
+        .container .contactInfo ul.info li span:nth-child(2) {
+            color: #020202;
+            font-weight: 500;
+            opacity: 0.5;
+        }
 
-.container .contactInfo ul.info li:hover span img,
-.container .contactInfo ul.info li:hover span:nth-child(2) {
-    opacity: 1;
-}
+        .container .contactInfo ul.info li:hover span img,
+        .container .contactInfo ul.info li:hover span:nth-child(2) {
+            opacity: 1;
+        }
 
-.container .contactInfo ul.socialIcon {
-    position: relative;
-    display: flex;
-}
+        .container .contactInfo ul.socialIcon {
+            display: flex;
+        }
 
-.container .contactInfo ul.socialIcon li {
-    list-style-type: none;
-    margin-right: 15px;
-}
+        .container .contactInfo ul.socialIcon li {
+            list-style-type: none;
+            margin-right: 15px;
+        }
 
-.container .contactInfo ul.socialIcon li a img {
-    filter: invert(1);
-    opacity: 0.5;
-}
+        .container .contactInfo ul.socialIcon li a img {
+            filter: invert(1);
+            opacity: 0.5;
+        }
 
-.container .contactInfo ul.socialIcon li a img:hover {
-    opacity: 1;
-}
+        .container .contactInfo ul.socialIcon li a img:hover {
+            opacity: 1;
+        }
 
-.container .contactForm {
-    position: absolute;
-    background-color: #fff;
-    padding: 70px 50px;
-    padding-left: 250px;
-    margin-left: 150px;
-    height: 100%;
-    box-shadow: 0 50px 50px rgba(0,0,0,0.5);
-}
+        .container .contactForm {
+            background-color: #fff;
+            padding: 30px; /* Adjusted padding for smaller screens */
+            width: 100%;
+            box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+        }
 
-.container .contactForm h2 {
-    color: #0f3959;
-    font-size: 24px;
-    font-weight: 500;
-}
+        .container .contactForm h2 {
+            color: #0f3959;
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 20px; /* Added margin for separation */
+        }
 
-.container .contactForm .formBox {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 30px;
-}
+        .container .contactForm .formBox {
+            display: flex;
+            flex-direction: column; /* Changed to column layout for small screens */
+            justify-content: center; /* Center content */
+        }
 
-.container .contactForm .formBox .inputBox {
-    position: relative;
-    margin: 0 0 35px 0;
-}
+        .container .contactForm .formBox .inputBox {
+            margin-bottom: 20px; /* Added margin for separation */
+        }
 
-.container .contactForm .formBox .inputBox.w50 {
-    width: 47%;
-}
+        .container .contactForm .formBox .inputBox input,
+        .container .contactForm .formBox .inputBox textarea {
+            width: 100%;
+            resize: none;
+            padding: 10px;
+            font-size: 18px;
+            color: #333;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #777;
+        }
 
-.container .contactForm .formBox .inputBox.w100 {
-    width: 100%;
-}
+        .container .contactForm .formBox .inputBox span {
+            position: absolute;
+            left: 5px;
+            padding: 5px 0;
+            pointer-events: none;
+            font-size: 17px;
+            font-weight: 300;
+            transition: 0.3s;
+        }
 
-.container .contactForm .formBox .inputBox input,
-.container .contactForm .formBox .inputBox textarea {
-    width: 100%;
-    resize: none;
-    padding: 10px 5px;
-    font-size: 18px;
-    color: #333;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #777;
-}
+        .container .contactForm .formBox .inputBox input:focus ~ span,
+        .container .contactForm .formBox .inputBox input:valid ~ span,
+        .container .contactForm .formBox .inputBox textarea:focus ~ span,
+        .container .contactForm .formBox .inputBox textarea:valid ~ span {
+            transform: translateY(-20px);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #131212;
+        }
 
-.container .contactForm .formBox .inputBox span {
-    position: absolute;
-    left: 5px;
-    padding: 5px 0;
-    pointer-events: none;
-    font-size: 17px;
-    font-weight: 300;
-}
+        .container .contactForm .formBox .inputBox input[type="submit"] {
+            cursor: pointer;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 12px;
+        }
 
-.container .contactForm .formBox .inputBox input:focus ~ span,
-.container .contactForm .formBox .inputBox input:valid ~ span,
-.container .contactForm .formBox .inputBox textarea:focus ~ span,
-.container .contactForm .formBox .inputBox textarea:valid ~ span {
-    transform: translateY(-20px);
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: rgb(19, 18, 18);
-    font-family: arial;
-}
+        .container .contactForm .formBox .inputBox input[type="submit"]:hover {
+            background-color: #111111;
+            font-weight: 500;
+        }
 
-.container .contactForm .formBox .inputBox input[type="submit"] {
-    position: relative;
-    cursor: pointer;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 12px;
-}
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            margin: 20px;
+        }
 
-.container .contactForm .formBox .inputBox input[type="submit"]:hover {
-    background-color: #111111;
-    font-weight: 500;
-}
+        .navbar a {
+            float: right;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-/*navigation*/
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    margin: 20px;
-  }
-  
-  .navbar a {
-    float: right;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
- 
-  }
-  
-  .navbar a:hover {
-    background-color: rgb(53, 186, 235);
- 
-  }
-  h1{
-    color: #fff;
-    text-align: center;
-    font-size: 80px;
-    font-weight: bold;
-  }
+        .navbar a:hover {
+            background-color: rgb(53, 186, 235);
+        }
 
-  footer{
-    float:inline-start;
-    font-size: 16px;
-    color: rgb(12, 12, 12);
-   padding: 0px 16;
-    margin: 10px 680px;
-  }
-  .footer{
-    overflow: hidden;
-    background-color: #333;
-  }
-  a{
-    border-radius: 20px;
-    padding-left: 20px;
-  }
+        h1 {
+            color: #fff;
+            text-align: center;
+            font-size: 80px;
+            font-weight: bold;
+        }
+
+        footer {
+            font-size: 16px;
+            color: rgb(12, 12, 12);
+            padding: 10px 16px;
+            background-color: #333;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            bottom: 0; /* Fixed to the bottom */
+            left: 0;
+        }
+
+        a {
+            border-radius: 20px;
+            padding-left: 20px;
+        }
+
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <h1>Contact US</h1>
-        <a href="/index">Home</a>
-        </div>
-    <section>
-        <div class="container">
-            <div class="contactInfo">
-                <div>
-                    <h2>Contact Info</h2>
-                    <ul class="info">
-                        <li>
-                            <span><img src="img/location.png" alt=""></span>
-                            <span>
+<div class="navbar">
+    <h1>Contact US</h1>
+    <a href="/index">Home</a>
+</div>
+<section>
+    <div class="container">
+        <div class="contactInfo">
+            <div>
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><img src="img/location.png" alt=""></span>
+                        <span>
                                 Bangalore,Karnataka,India
                             </span>
-                        </li>
-                        <li>
-                            <span><img src="img/mail.png" alt=""></span>
-                            <span>DepressioAdmin@gmail.com</span>
-                        </li>
-                        <li>
-                            <span><img src="img/call.png" alt=""></span>
-                            <span>0481-111-111</span>
-                        </li>
-                    </ul>
-                </div>
-                <ul class="socialIcon">
-                    <li><a href="#"><img src="img/1.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/2.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/3.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/4.png" alt=""></a></li>
-                    <li><a href="#"><img src="img/5.png" alt=""></a></li>
+                    </li>
+                    <li>
+                        <span><img src="img/mail.png" alt=""></span>
+                        <span>DepressioAdmin@gmail.com</span>
+                    </li>
+                    <li>
+                        <span><img src="img/call.png" alt=""></span>
+                        <span>0481-111-111</span>
+                    </li>
                 </ul>
             </div>
+            <ul class="socialIcon">
+                <li><a href="#"><img src="img/1.png" alt=""></a></li>
+                <li><a href="#"><img src="img/2.png" alt=""></a></li>
+                <li><a href="#"><img src="img/3.png" alt=""></a></li>
+                <li><a href="#"><img src="img/4.png" alt=""></a></li>
+                <li><a href="#"><img src="img/5.png" alt=""></a></li>
+            </ul>
+        </div>
 
-            <div class="contactForm">
-                <h2>Send a Message</h2>
-                <div class="formBox">
-                    <div class="inputBox w50">
-                        <input type="text" name="" id="" required>
-                        <span>First Name</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="text" name="" id="" required>
-                        <span>Last Name</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="email" name="" id="" required>
-                        <span>Email</span>
-                    </div>
-                    <div class="inputBox w50">
-                        <input type="text" name="" id="" required>
-                        <span>Mobile Number</span>
-                    </div>
-                    <div class="inputBox w100">
-                        <textarea name="" id="" required></textarea>
-                        <span>Write Your Message Here.</span>
-                    </div>
-                    <div class="inputBox w100">
-                        <input type="submit" value="Submit">
-                    </div>
+        <div class="contactForm">
+            <h2>Send a Message</h2>
+            <div class="formBox">
+                <div class="inputBox">
+                    <input type="text" name="firstName" id="firstName" required>
+                    <span>First Name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="lastName" id="lastName" required>
+                    <span>Last Name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="email" id="email" required>
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="mobileNumber" id="mobileNumber" required>
+                    <span>Mobile Number</span>
+                </div>
+                <div class="inputBox">
+                    <textarea name="message" id="message" required></textarea>
+                    <span>Write Your Message Here.</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Submit" onclick="return validateForm()">
                 </div>
             </div>
         </div>
-    </section>
-    <footer>
-        <p><h4>Students @ 2024<h4></p>
-    </footer>
-</body>
+    </div>
+</section>
+<footer>
+    <p color:#fff><h4>Students @ 2024</h4></p>
+</footer>
+
 <script>
     function validateForm() {
         var firstName = document.getElementById('firstName').value;
@@ -347,4 +326,5 @@ section {
         return isValid;
     }
 </script>
+</body>
 </html>

@@ -102,6 +102,10 @@ def sentiment():
 def service():
     return render_template("service.html")
 
+@app.route("/model")
+def model():
+    return render_template("Model.html")
+
 @app.route("/about")
 def about():
     return render_template("about.html")

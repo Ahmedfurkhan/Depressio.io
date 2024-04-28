@@ -36,7 +36,9 @@
             line-height: 24px;
             margin: 30px auto;
             text-align: left;
-            width: 800px;
+            width: 100%; /* Adjusted width for responsiveness */
+            max-width: 800px; /* Added max-width for larger screens */
+            overflow-x: auto; /* Added horizontal scrolling for small screens */
         }
         th {
             background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
@@ -109,21 +111,32 @@
             text-shadow: 0 1px 0 #fff;
         }
         button.big-button {
-          padding: 12px 30px; /* Increase padding to make the button bigger */
-          background-color: rgba(0, 136, 169, 1);
-          border: none;
-          border-radius: 50px;
-          cursor: pointer;
-          transition: all 0.3s ease 0s;
-          margin: 20px auto 20px auto;
-          color: #fff; /* Set text color to white */
-          font-size: 18px; /* Increase font size */
-      }
-  
-      button.big-button:hover {
-          background-color: #000; /* Change background color on hover */
-          border: 1px solid #4070f4;
-      }
+            padding: 12px 30px; /* Increase padding to make the button bigger */
+            background-color: rgba(0, 136, 169, 1);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+            margin: 20px auto 20px auto;
+            color: #fff; /* Set text color to white */
+            font-size: 18px; /* Increase font size */
+            display: block; /* Make button a block element */
+            width: 80%; /* Adjust width for responsiveness */
+            max-width: 200px; /* Limit maximum width for larger screens */
+        }
+
+        button.big-button:hover {
+            background-color: #000; /* Change background color on hover */
+            border: 1px solid #4070f4;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            button.big-button {
+                width: 100%; /* Adjust width for smaller screens */
+                max-width: none; /* Remove max-width for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -131,20 +144,20 @@
         <div class="container">
             <div class="col-md-12">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="navbar-brand" href="#">
                         <img class="logo" src="https://img.freepik.com/premium-photo/manipulator-abuser-black-man-head-hand-with-strings-fingers-isolated-white-background-male-trying-dominate-relationship-control-another-person_361816-5273.jpg?w=826" alt="error" width="100px" height="80px" style="border-radius: 20px;">         
                     </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
                 </div> 
                 <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-                    <ul>
+                    <ul class="nav navbar-nav">
                         <li><a href="/index" class="/index">
-                          <button class="big-button">Home</button>
-                      </a></li>
+                            <button class="big-button">Home</button>
+                        </a></li>
                     </ul>
                 </div>
             </div>
@@ -186,5 +199,7 @@
             </tr>
         </tbody>
     </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -8,7 +8,8 @@
   <meta name="description" content="DeepBreath: Depression Test">
   <meta name="keywords" content="Depression Test using Machine Learning">
 
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap">
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -24,6 +25,10 @@
       border-bottom: none;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       position: relative;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .navbar .nav-link {
@@ -32,7 +37,7 @@
       transition: all 0.3s ease-in-out;
       font-size: 18px;
       font-weight: 600;
-      text-align: center; 
+      text-align: center;
     }
 
     .navbar .nav-link:hover {
@@ -45,6 +50,9 @@
       border: none;
       background-color: transparent;
       cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
     }
 
     .navbar-toggler:focus {
@@ -102,8 +110,13 @@
       color: inherit;
     }
 
+    .banner-logo {
+      text-align: center;
+      margin-top: 50px;
+    }
+
     .banner-logo img {
-      width: 400px;
+      max-width: 100%;
       height: auto;
       border-radius: 20px;
     }
@@ -114,12 +127,15 @@
       font-weight: 700;
       margin-top: 30px;
       margin-bottom: 20px;
+      text-align: center;
     }
 
     .banner-text p {
       font-size: 20px;
       font-weight: 400;
-      margin-bottom: 3
+      margin-bottom: 30px;
+      text-align: justify;
+      color: #000;
     }
 
     /* Footer Styling */
@@ -133,16 +149,53 @@
     footer p {
       margin-bottom: 0;
     }
+
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .footer-content h3 {
+      font-size: 24px;
+    }
+
+    .footer-content p {
+      font-size: 16px;
+    }
+
+    .socials {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+    }
+
+    .socials li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .socials li:last-child {
+      margin-right: 0;
+    }
+
+    .socials a {
+      color: #333;
+      font-size: 20px;
+    }
+
+    /* Centering Image */
+    @media only screen and (max-width: 768px) {
+      .banner-logo {
+        display: flex;
+        justify-content: center;
+      }
+    }
   </style>
 </head>
 
 <body>
   <nav class="navbar">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img class="logo" src="https://img.freepik.com/premium-photo/manipulator-abuser-black-man-head-hand-with-strings-fingers-isolated-white-background-male-trying-dominate-relationship-control-another-person_361816-5273.jpg?w=826" alt="error">
-        <span class="navbar-heading">Depression Detection</span>
-      </a>
       <button class="navbar-toggler" id="navbar-toggler" aria-label="Toggle navigation" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -155,36 +208,48 @@
           <li class="nav-item"><a class="nav-link" href="/sentiment">Sentiment Based Test</a></li>
           <li class="nav-item"><a class="nav-link" href="/remedies">Remedies</a></li>
           <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/Model">Models</a></li>
+          <li class="nav-item"><a class="nav-link" href="/model">Models</a></li>
           <li class="nav-item"><a class="nav-link" href="/contact">Contact Us</a></li>
           <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
         </ul>
       </div>
     </div>
   </nav>
+  <div class="container">
+    <div class="banner-text">
+      <h1>Depression Detection</h1>
+      <a class="navbar-brand" href="#">
+        <div class="banner-logo">
+          <img src="{{url_for('static',filename='img/dp.png')}}">
+        </div>
+      </a>
+      <p>Depression is a prevalent mental health condition marked by enduring sensations of sadness, hopelessness, and diminished interest in daily activities. Recognizing these symptoms is crucial, and seeking assistance is imperative. Leveraging state-of-the-art machine learning algorithms, our Depression Detection system meticulously analyzes social media datasets to provide a comprehensive understanding of mental health. By discerning user interactions, sentiment trends, and behavioral patterns, we offer personalized insights for early intervention and improved well-being. Empowering individuals with actionable information, our platform fosters proactive measures for addressing depression and promoting mental wellness.</p>
+    </div>
+  </div>
   <footer class="footer">
     <div class="container">
-        <div class="footer-content">
-            <h3>Datalog Research</h3>
-            <p style="color: #000">DATALOG RESEARCH LAB is an Information technology service organization with vast experience in niche skills in MIDDLEWARE infrastructure design, development and support expertise along with in-house software development and develops middleware fusion “PROOF OF CONCEPTS” using IBM, ORACLE and open source tools.</p>
-            <ul class="socials">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-            </ul>
-        </div>        
+      <div class="footer-content">
+        <h3>Datalog Research</h3>
+        <p style="color: #000;">DATALOG RESEARCH LAB specializes in IT services, focusing on middleware infrastructure design, development, and support. With expertise in IBM, Oracle, and open-source tools, we excel in creating innovative middleware fusion solutions and proof of concepts.</p>        
+        <ul class="socials">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+        </ul>
+      </div>
     </div>
-</footer>
+  </footer>
   <script>
     const navbarToggler = document.getElementById('navbar-toggler');
     const navbarCollapse = document.getElementById('navbar-collapse');
 
-    navbarToggler.addEventListener('click', function() {
+    navbarToggler.addEventListener('click', function () {
       this.classList.toggle('active');
       navbarCollapse.classList.toggle('show');
     });
   </script>
 </body>
+
 </html>
